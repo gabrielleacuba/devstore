@@ -8,7 +8,6 @@ async function getFeaturedProducts(): Promise<Product[]> {
     next: {
       revalidate: 60 * 60,
     },
-    cache: 'no-cache',
   })
 
   const products = await response.json()
